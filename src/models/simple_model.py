@@ -1,7 +1,7 @@
 import random
-from ..data_models import Task
 
 
 class RandomModel:
-    def solve(self, task: Task) -> str:
-        return random.choice(task.options)
+    def solve(self, task) -> str:
+        idx = random.choice(range(len(task.options)))
+        return chr(65 + idx)

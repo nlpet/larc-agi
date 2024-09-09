@@ -16,17 +16,35 @@ The goal of this language-based ARC challenge is to provide a benchmark for meas
 ## Project Structure
 
 ```
-project_root/
+Project structure:
+larc_agi/
 ├── src/
-│   ├── task_generator/
-│   ├── evaluator/
-│   ├── models/
+│   ├── __init__.py
+│   ├── task_base.py
+│   ├── task_registry.py
+│   ├── tasks/
+│   │   ├── __init__.py
+│   │   ├── symbol_manipulation/
+│   │   │   ├── __init__.py
+│   │   │   ├── task_1.py
+│   │   │   ├── task_2.py
+│   │   │   └── ...
+│   │   ├── function_composition/
+│   │   │   ├── __init__.py
+│   │   │   ├── task_1.py
+│   │   │   ├── task_2.py
+│   │   │   └── ...
+│   │   └── logical_grid_puzzle/
+│   │       ├── __init__.py
+│   │       ├── task_1.py
+│   │       ├── task_2.py
+│   │       └── ...
 │   └── utils/
-├── data/
+│       ├── __init__.py
+│       └── task_loader.py
 ├── tests/
-├── notebooks/
-├── requirements.txt
-└── main.py
+├── main.py
+└── setup.py
 ```
 
 - `src/`: Contains the core components of the project.
